@@ -1,24 +1,21 @@
-using Cibertec.Models;
-using Cibertec.Repositories.EntityFramework.Northwind;
-using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
 using Xunit;
+using Cibertec.Repositories.Dapper.Northwind;
+using System.Linq;
+using Cibertec.Models;
 
-namespace Cibertec.Repositories.EntityFrameworkTests
+namespace Cibertec.Repositories.DapperTests
 {
     public class CustomerRepositoryTest
     {
-        private readonly DbContext _context;
-        private readonly CustomerRepository repo;
+        private CustomerRepository repo;
 
         public CustomerRepositoryTest()
         {
-            _context = new NorthwindDbContext();
-            repo = new CustomerRepository(_context);
+            repo = new CustomerRepository("Server=.;Database=Northwind_Lite; Trusted_Connection=True;MultipleActiveResultSets=True");
         }
 
-        [Fact(DisplayName ="[CustomerRepository]Get All")]
+        [Fact(DisplayName = "[CustomerRepository]Get All")]
         public void Customer_Reposiroty_GetAll()
         {
             var result = repo.GetList();
@@ -71,4 +68,5 @@ namespace Cibertec.Repositories.EntityFrameworkTests
 
 
     }
+
 }
