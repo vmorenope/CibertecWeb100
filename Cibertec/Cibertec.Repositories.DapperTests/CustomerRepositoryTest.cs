@@ -29,6 +29,13 @@ namespace Cibertec.Repositories.DapperTests
             Assert.True(customer != null);
         }
 
+        [Fact(DisplayName = "[CustomerRepository]Search By Name")]
+        public void Customer_Reposiroty_Search_By_Name()
+        {
+            var customer = repo.SearchByNames("Maria","Anders");
+            Assert.True(customer != null);
+        }
+
         [Fact(DisplayName = "[CustomerRepository]Insert")]
         public void Customer_Repository_Insert()
         {
