@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cibertec.Models", "Cibertec.Models\Cibertec.Models.csproj", "{00B7C042-D694-4731-B338-17BD921532C3}"
 EndProject
@@ -19,11 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cibertec.Repositories.Dappe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cibertec.Repositories.DapperTests", "Cibertec.Repositories.DapperTests\Cibertec.Repositories.DapperTests.csproj", "{C9FD5345-AACF-418A-B290-73F1C9D98F96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cibertec.UnitOfWork", "Cibertec.UnitOfWork\Cibertec.UnitOfWork.csproj", "{9B82FF23-88E5-4549-B02D-3A722B310D3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cibertec.UnitOfWork", "Cibertec.UnitOfWork\Cibertec.UnitOfWork.csproj", "{9B82FF23-88E5-4549-B02D-3A722B310D3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{DAAF4245-D7A2-4402-92A5-AD196188AF1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cibertec.MVC", "Cibertec.MVC\Cibertec.MVC.csproj", "{E4A9B416-34F0-4F7A-A799-948E1964D44F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cibertec.MVC", "Cibertec.MVC\Cibertec.MVC.csproj", "{E4A9B416-34F0-4F7A-A799-948E1964D44F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIbertec.WebApi", "CIbertec.WebApi\CIbertec.WebApi.csproj", "{7B711542-2564-45A0-A925-668852D72D03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{E4A9B416-34F0-4F7A-A799-948E1964D44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4A9B416-34F0-4F7A-A799-948E1964D44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4A9B416-34F0-4F7A-A799-948E1964D44F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B711542-2564-45A0-A925-668852D72D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B711542-2564-45A0-A925-668852D72D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B711542-2564-45A0-A925-668852D72D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B711542-2564-45A0-A925-668852D72D03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{C9FD5345-AACF-418A-B290-73F1C9D98F96} = {686B29E0-5D52-42BA-B7F3-EF8CC76D87F7}
 		{9B82FF23-88E5-4549-B02D-3A722B310D3D} = {16E9C4D0-F112-498E-A269-AFCC01BACAE9}
 		{E4A9B416-34F0-4F7A-A799-948E1964D44F} = {DAAF4245-D7A2-4402-92A5-AD196188AF1A}
+		{7B711542-2564-45A0-A925-668852D72D03} = {DAAF4245-D7A2-4402-92A5-AD196188AF1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA846BAC-8AC7-454E-B999-B090DFE2217E}
