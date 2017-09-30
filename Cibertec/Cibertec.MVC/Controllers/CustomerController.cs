@@ -47,28 +47,30 @@ namespace Cibertec.MVC.Controllers
             return View(customer);
         }
 
-        public IActionResult Detail(int id)
+      
+        public ActionResult Details(int id)
         {
-            return View(_unit.Customers.GetById(id));
+            var customer = _unit.Customers.GetById(id);
+            if (customer == null) return RedirectToAction("Index");
+            return View(customer);
         }
 
+        public IActionResult Create()
+        {
+            var customer = new Customer();
+            return View(customer);
+        }
 
-        //public IActionResult Create(Customer customer)
-        //{
-        //    return View(_unit.Customers.GetById(0));
-        //}
-
-        //[HttpPost]
-        //public IActionResult Create(Customer customer)
-        //{
-        //    if (_unit.Customers.)
-        //    {
-        //        return RedirectToAction("Index");
-        //    }
-
-        //    return View(customer);
-
-        //}
+        [HttpPost]
+        public IActionResult Create(Customer customer)
+        {
+            if (customer != null)
+            {
+                _unit.Customers.Insert(customer);
+                return RedirectToAction("Index");
+            }
+            return View(customer);
+        }
 
     }
 }

@@ -4,6 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Cibertec.UnitOfWork;
 using Cibertec.Repositories.Dapper.Northwind;
+using FluentValidation.AspNetCore;
+using FluentValidation;
+using Cibertec.Models;
+using Cibertec.MVC.Validator;
 
 namespace Cibertec.MVC
 {
@@ -29,7 +33,8 @@ namespace Cibertec.MVC
                     )
                 );
 
-            services.AddMvc();
+            services.AddMvc().AddFluentValidation();
+            services.AddTransient<IValidator<Customer>, CustomerValidator>();
 
         }
 
