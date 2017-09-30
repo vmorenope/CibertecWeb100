@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Cibertec.UnitOfWork;
+using Cibertec.Repositories.Dapper.Northwind;
 
 namespace Cibertec.MVC
 {
@@ -19,9 +17,20 @@ namespace Cibertec.MVC
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        //para configurar se necesita
         public void ConfigureServices(IServiceCollection services)
         {
+            // Configurarción para uso de Dapper
+
+            services.AddSingleton<IUnitOfWork>
+                (option=> new NorthwindUnitOfWork
+                    (
+                        Configuration.GetConnectionString("Northwind")
+                    )
+                );
+
             services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
