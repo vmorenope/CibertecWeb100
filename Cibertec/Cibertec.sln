@@ -27,7 +27,28 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cibertec.MVC", "Cibertec.MV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CIbertec.WebApi", "CIbertec.WebApi\CIbertec.WebApi.csproj", "{7B711542-2564-45A0-A925-668852D72D03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cibertec.WebApi.Test", "Cibertec.WebApi.Test\Cibertec.WebApi.Test.csproj", "{910A6BEB-EC54-4A14-9630-C397953E003C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cibertec.WebApi.Test", "Cibertec.WebApi.Test\Cibertec.WebApi.Test.csproj", "{910A6BEB-EC54-4A14-9630-C397953E003C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Cibertec.Html", "..\Cibertec.Html\", "{A7D81D4C-EABD-42AE-80B9-9834A65DC54C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57473"
+		Debug.AspNetCompiler.PhysicalPath = "..\Cibertec.Html\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57473\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57473"
+		Release.AspNetCompiler.PhysicalPath = "..\Cibertec.Html\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57473\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57473"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +96,10 @@ Global
 		{910A6BEB-EC54-4A14-9630-C397953E003C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{910A6BEB-EC54-4A14-9630-C397953E003C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{910A6BEB-EC54-4A14-9630-C397953E003C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D81D4C-EABD-42AE-80B9-9834A65DC54C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D81D4C-EABD-42AE-80B9-9834A65DC54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D81D4C-EABD-42AE-80B9-9834A65DC54C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D81D4C-EABD-42AE-80B9-9834A65DC54C}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +115,7 @@ Global
 		{E4A9B416-34F0-4F7A-A799-948E1964D44F} = {DAAF4245-D7A2-4402-92A5-AD196188AF1A}
 		{7B711542-2564-45A0-A925-668852D72D03} = {DAAF4245-D7A2-4402-92A5-AD196188AF1A}
 		{910A6BEB-EC54-4A14-9630-C397953E003C} = {686B29E0-5D52-42BA-B7F3-EF8CC76D87F7}
+		{A7D81D4C-EABD-42AE-80B9-9834A65DC54C} = {DAAF4245-D7A2-4402-92A5-AD196188AF1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA846BAC-8AC7-454E-B999-B090DFE2217E}
