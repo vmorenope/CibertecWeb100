@@ -13,4 +13,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Cibertec.Repositories.Dapper\Cibertec.Repositories.Dapper.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Ventas\Controllers\" />
+    <Folder Include="Areas\Ventas\Data\" />
+    <Folder Include="Areas\Ventas\Models\" />
+    <Folder Include="Areas\Ventas\Views\" />
+  </ItemGroup>
 </Project>
