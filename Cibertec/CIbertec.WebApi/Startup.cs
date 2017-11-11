@@ -18,6 +18,7 @@ namespace CIbertec.WebApi
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,18 +29,20 @@ namespace CIbertec.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().AddFluentValidation();
             services.AddSingleton<IUnitOfWork>
                 (option => new NorthwindUnitOfWork
                     (
                         Configuration.GetConnectionString("Northwind")
                     )
                 );
-            services.AddMvc();
+
+            //services.AddMvc();
             // código para poder referenciar fluent validation desde el inyector de dependencias de Asp Net Core.
             // Se podria usar Using y llamar a una clase Validator donde esten todos los validadores generados
             // como services.AddTransient<IValidator<Customer>, CustomerValidator>();
-            services.AddSingleton<IUnitOfWork>(option => new NorthwindUnitOfWork(Configuration.GetConnectionString("Northwind")));
-            services.AddMvc().AddFluentValidation();
+            // services.AddSingleton<IUnitOfWork>(option => new NorthwindUnitOfWork(Configuration.GetConnectionString("Northwind")));
+
             services.AddTransient<IValidator<Customer>, CustomerValidator>();
 
             //Optimizar el servicio WebApi. 

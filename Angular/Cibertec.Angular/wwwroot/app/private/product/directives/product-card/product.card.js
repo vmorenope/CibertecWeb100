@@ -14,7 +14,7 @@
                 package: '@',
                 isDiscontinued: '='
             },
-            templateUrl: 'app/private/product/directives/productcard/product-card.html'
+            templateUrl: 'app/private/product/directives/product-card/product-card.html'
 
         };
     }

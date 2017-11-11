@@ -8,7 +8,7 @@
             scope: {
                 product: '='
             },
-            templateUrl: 'app/private/product/directives/productform/product-form.html'
+            templateUrl: 'app/private/product/directives/product-form/product-form.html'
         };
     }
 })();
