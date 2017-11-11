@@ -51,5 +51,20 @@ namespace CIbertec.WebApi.Controllers
                 return Ok(_unit.Products.Delete(product));
             return BadRequest(new { Message = "Incorrect data." });
         }
+
+        [HttpGet]
+        [Route("count")]
+        public IActionResult GetCount()
+        {
+            return Ok(_unit.Products.Count());
+        }
+        [HttpGet]
+        [Route("list/{page}/{rows}")]
+        public IActionResult GetList(int page, int rows)
+        {
+            var startRecord = ((page - 1) * rows) + 1;
+            var endRecord = page * rows;
+            return Ok(_unit.Products.PagedList(startRecord, endRecord));
+        }
     }
 }

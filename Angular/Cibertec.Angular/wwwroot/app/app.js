@@ -3,6 +3,7 @@
 
     angular.module('app',
         ['ui.router',
-            'LocalStorageModule'
+            'LocalStorageModule',
+            'ui.bootstrap'
         ]); //2. se define el modulo
 })();
