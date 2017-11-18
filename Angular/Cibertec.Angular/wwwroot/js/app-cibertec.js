@@ -33,8 +33,7 @@
             var defer = $q.defer();
             var url = configService.getApiUrl() + '/Token';
             $http.post(url, user)
-                .then(function (result) {
-                        + result.data.access_Token;
+                .then(function (result) {                        
                     localStorageService.set('userToken',
                         {
                             token: result.data.access_Token,
@@ -490,7 +489,7 @@ function productController(dataService, configService, $state,
 
     function loginController($http, authenticationService, configService, $state) {
         var vm = this;
-        vm.user = {}; vm.title = 'Login'; vm.login = login;
+        vm.user = {}; vm.title = 'Login'; vm.login = login; vm.showError = false;
 
         init();
 
@@ -499,7 +498,12 @@ function productController(dataService, configService, $state,
         }
 
         function login() {
-            authenticationService.login(vm.user);
+            authenticationService.login(vm.user).then(function (result) {
+                vm.showError = false;
+                $state.go("home");
+            }, function (error) {
+                vm.showError = true;
+            });
         }
     }
 })();

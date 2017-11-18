@@ -14,8 +14,7 @@
             var defer = $q.defer();
             var url = configService.getApiUrl() + '/Token';
             $http.post(url, user)
-                .then(function (result) {
-                        + result.data.access_Token;
+                .then(function (result) {                        
                     localStorageService.set('userToken',
                         {
                             token: result.data.access_Token,

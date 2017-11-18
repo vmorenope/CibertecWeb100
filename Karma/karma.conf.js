@@ -14,11 +14,13 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-      '../Angular/Cibertec.Angular/wwwroot/js/angular.js',
-      './node_modules/angular-mocks/angular-mocks.js',
-      './tests/**/*.spec.js'
-    ],
+    files: [ 
+      '../Angular/Cibertec.Angular/wwwroot/js/angular.js', 
+      './node_modules/angular-mocks/angular-mocks.js', 
+      '../Angular/Cibertec.Angular/wwwroot/js/app-site.js', 
+      '../Angular/Cibertec.Angular/wwwroot/js/app-cibertec.js', 
+      './tests/**/*.spec.js' 
+      ],
 
 
     // list of files to exclude

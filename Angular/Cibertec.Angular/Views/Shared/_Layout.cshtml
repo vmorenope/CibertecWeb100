@@ -3,13 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Cibertec.Angular</title>
-
-    <environment include="Development">
-        <link href="~/Libraries/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>Cibertec.Angular</title>
+    <environment names="Development">
+        <link href="~/libraries/bootstrap/css/bootstrap.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
-    @* No utilizar referencias asdn externos*@
+    <environment names="Production">
+        <link href="~/libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+    </environment>
+
 </head>
 @*<body ng-controller="applicationController as vm">*@
 <body ng-controller="applicationController as vm" ng-init="init('@ViewBag.WebApiUrl')">
