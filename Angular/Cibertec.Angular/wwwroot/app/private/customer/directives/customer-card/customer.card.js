@@ -2,7 +2,7 @@
     'use strict';
     angular.module('app')
         .directive('customerCard', customerCard)
-        function CustomerCard() {
+        function customerCard() {
             return {
                 restrict: 'E',
                 transclude: true,

@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - Cibertec.Angular</title>
 
     <environment include="Development">
-        <link href="~/Libreries/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/Libraries/bootstrap/css/bootstrap.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     @* No utilizar referencias asdn externos*@
@@ -45,36 +45,16 @@
     </div>
 
     <environment include="Development">
-        <script src="~/Libreries/jquery/jquery.js"></script>
-        <script src="~/Libreries/bootstrap/js/bootstrap.js"></script>
-        <script src="~/Libreries/angular/angular.js"></script>
-        <script src="~/Libreries/angular/angular-ui-router.js"></script>
-        <script src="~/Libreries/angular/angular-local-storage.js"></script>
-        <script src="~/Libreries/angular/ui-bootstrap-tpls.js"></script>
-
-        <script src="~/app/app.js"></script>
-        <script src="~/app/app.config.js"></script>
-        <script src="~/app/app.controller.js"></script>
-        <script src="~/app/app.routes.js"></script>
-        <script src="~/app/app.interceptor.js"></script>
-
-        @*2da parte*@
-        <script src="~/app/shared/data.service.js"></script>
-        <script src="~/app/shared/settings.service.js"></script>
-        <script src="~/app/shared/authentication.service.js"></script>
-
-        <script src="~/app/public/login/login.controller.js"></script>
-
-        <script src="~/app/components/modal/modal.directive.js"></script>
-
-        <script src="~/app/private/product/directives/product-card/product.card.js"></script>
-        <script src="~/app/private/product/directives/product-form/product.form.js"></script>
-        <script src="~/app/private/product/product.controller.js"></script>
-
-        <script src="~/app/private/customer/directives/customer-card/customer.card.js"></script>
-        <script src="~/app/private/customer/directives/customer-form/customer.form.js"></script>
-        <script src="~/app/private/customer/customer.controller.js"></script>
-
+        <script src="~/js/bootstrap.js"></script>
+        <script src="~/js/angular.js"></script>
+        <script src="~/js/app-site.js"></script>
+        <script src="~/js/app-cibertec.js"></script>
+    </environment>
+    <environment names="Production">
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/angular.min.js"></script>
+        <script src="~/js/app-site.min.js"></script>
+        <script src="~/js/app-cibertec.min.js"></script>
     </environment>
 </body>
 </html>
